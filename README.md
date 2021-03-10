@@ -52,7 +52,7 @@ Its Easy, as there are many companies which sell SSL encryption certificate serv
 - This project budget is around one million per year which primarily completed by donations <br />
 [Get more information on wikipedia](https://en.wikipedia.org/wiki/OpenSSL)
 
-## How OpenSSL is Work
+## How OpenSSL Works
 Open SSL architecture is divided into 4 parts
 1. libcrypto
 2. libssl
@@ -86,10 +86,170 @@ Open SSL architecture is divided into 4 parts
 ![image](https://raw.githubusercontent.com/95keshav/openssl/main/openssl%20modules.png) <br />
 [Get more information on OpenSSL Architechture](https://www.openssl.org/docs/OpenSSLStrategicArchitecture.html)
 
+
+
+## OpenSSL installation
+
+#### on Windows
+
+[Downloading URL](https://slproweb.com/products/Win32openssl.html)
+
+[InstalltionTurorial](https://www.youtube.com/watch?v=jSkQ27sTto0&ab_channel=TechDeepDive)
+
+(*Since windows version package is not available on OpenSSL website, I found an URL in third party website and check that it is virus-free via https://www.virustotal.com/*)
+
+
+
+#### On Ubuntu
+
+__Type commands in Ubuntu Terminal:__
+
+~~~
+$ sudo apt-get install openssl
+$ sudo apt-get install libssl-dev
+~~~
+
+(libssl-dev is OpenSSL development package)
+
+
+
+## Technical presentation on Ubuntu
+
+#### OpenSSL  RSA algorithm application
+
+
+
+**Generating  private key**:
+
+~~~
+/tmp/Alice$ openssl genrsa -out A_private.key 2048
+/tmp/Bob$ openssl genrsa -out B_private.key 2048
+~~~
+
+
+
+**Generating public key**: 
+
+~~~
+/tmp/Alice$ openssl rsa -in A_private.key -out A_public.key -pubout
+/tmp/Bob$ openssl rsa -in B_private.key -out B_public.key -pubout
+~~~
+
+(*.pem is either ok to be generated and used the same function with .key*)
+
+(*use $ openssl rsa -in A.key -text to get parameters like modulus, primes, exponents and coefficient in RSA algorithms*)
+
+
+
+**Exchanging keys**: 
+
+Simulating by copying or linking using  'ln -s' or commands in Ubuntu file system.
+
+~~~
+/tmp/Alice$ ln -s /tmp/Bob/B_public.key
+/tmp/Bob$ ln -s /tmp/Alice/A_public.key
+~~~
+
+
+
+**Typing a Message**:
+
+~~~
+/tmp/Alice$ echo"Hi Bob! This is Alice." > A_msg
+~~~
+
+
+
+**Scenario1:**
+
+**Encryption**:
+
+~~~
+/tmp/Alice$ openssl rsautl -encrypt -in A_msg -out ciphertext -inkey B_public.key -pubin
+~~~
+
+**Massage-passing**:
+
+~~~
+/tmp/Bob$ ln -s /tmp/Alice/ciphertext
+~~~
+
+**Decryption**: 
+
+~~~
+/tmp/Bob$  openssl rsautl -decrypt -inkey B_private.key -in ciphertext -out B_msg
+~~~
+
+
+
+**Scenario2**:
+
+**Sign**:
+
+~~~
+/tmp/Alice$ openssl rsautl -inkey A_private.key  -sign -in msg -out A_signed_msg
+~~~
+
+**Massage-passing**:
+
+~~~
+/tmp/Bob$ ln -s /tmp/Alice/A_signed_msg
+~~~
+
+**Verify**:
+
+~~~
+/tmp/Bob$ openssl rsautl -verify -inkey A_public.key -in A_signed_msg -out B_verified_msg -pubin
+~~~
+
+Then only by using Alice’s public key can Bob decrypt the message. In this method Bob can verify that the message can only be from Alice, which is non-repudiation. 
+
+Eve who wants to eavesdrop the messages is not introduced here, because the RSA algorithm guarantees the unbreakability from the theory of Math and CS. If the length of the private key is long enough and well kept, Eve won’t be able to decipher unless she revolutionizes mathematics or, she makes quantum computer come true. 
+
+Thanks to the Cryptographers who created such mighty algorithms, and thanks to the engineers who contributed to open source communities like OpenSSL that made these algorithms accessible to everyone, thus making our privacy well protected. You know without their fighting, such algorithms maybe exclusive to American government and military use for many more years. That’s another story about Phil Zimmerman and crypto wars.
+
+
+
+#### OpenSSL CSR generating
+
+（CSR is short for Certificate Signing Request, which can be authenticated by a CA to be a Certificate）
+
+~~~
+$ openssl req -out mydomain.csr -new -newkey rsa:2048 -nodes -keyout mydomain.key
+~~~
+
+And then fill in information as requested.
+
+![CSR](D:\Github\openssl\CSR.png)
+
+（*use $ openssl req -in mydomain.csr -text to check the details of the csr file*）
+
+
+
+### Apply OpenSSL on Windows
+
+
+
+[Tutorial of Encryption and Decryption in AES algorithm](https://www.youtube.com/watch?v=4lgcElJWxVM)
+
+[Tutoroal of generating RSA keys](https://www.youtube.com/watch?v=iHb3nFtzFoc)
+
+
+
 ## References
 https://www.openssl.org/docs<br />
 “<a id="1">[1]</a>.” https://www.openssl.org, https://www.openssl.org/docs/OpenSSLStrategicArchitecture.html.<br />
 “Figure1. OSI Layers and Protocols used.” https://thecybersecuritymancom.com, https://thecybersecuritymancom.files.wordpress.com/2017/11/84433547__web.png.<br />
 “Figure 2. SSL Client-Server communication.” https://www.manageengine.com/, https://www.manageengine.com/key-manager/information-center/what-is-ssl-certificate-management.html.<br />
 https://www.sciencedirect.com/topics/engineering/layered-architecture<br />
+
+“<a id="1">[2]</a>.” https://www.youtube.com/watch?v=-nEh7X4dtuw&t=58s
+
+“<a id="1">[3]</a>.” https://support.globalsign.com/ssl/ssl-certificates-installation/generate-csr-openssl
+
+“<a id="1">[4]</a>.” https://www.digicert.com/kb/ssl-support/openssl-quick-reference-guide.htm
+
+“<a id="1">[5]</a>.” https://en.wikipedia.org/wiki/Crypto_Wars
+
+“<a id="1">[6]</a>.” https://en.wikipedia.org/wiki/Phil_Zimmermann
 
