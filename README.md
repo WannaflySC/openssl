@@ -19,21 +19,21 @@
 ## How To Get SSL Certificate?
 
 Its Easy, as there are many companies which sell SSL encryption certificate service.
-[Go daady](https://ca.godaddy.com/offers/ssl-certificate/month?isc=sshl5ca18&countryview=1&currencytype=CAD&gclid=Cj0KCQiA1pyCBhCtARIsAHaY_5c0At-wdCdfLCOA5i0WMMxTheGqqBCbsLGrQLa4z-5VjQnd03dQJLsaAlPtEALw_wcB&gclsrc=aw.ds)
-[Comodo SSl](https://comodosslstore.com/promoads/cheap-comodo-ssl-certificates.aspx?gclid=Cj0KCQiA1pyCBhCtARIsAHaY_5e4SS0meZ14zKfxrpohuZkCtUGKtH9eKy7dR2JhFINq5N28rm2yQkwaAh4ZEALw_wcB)
-[Digicert](https://www.digicert.com/tls-ssl/compare-certificates?ef_id=Cj0KCQiA1pyCBhCtARIsAHaY_5eLOU_wn5_iGycf_FAMDTZnA3NFnWhCFkLvcjKr2sZqpop_mak2bSUaArzWEALw_wcB:G:s&s_kwcid=AL!6100!3!389968107068!e!!g!!digicert&campaignid=197469053&adgroupid=13418307173&gclid=Cj0KCQiA1pyCBhCtARIsAHaY_5eLOU_wn5_iGycf_FAMDTZnA3NFnWhCFkLvcjKr2sZqpop_mak2bSUaArzWEALw_wcB)
-[Entrust Datacard](https://www.entrust.com/digital-security/certificate-solutions/products/digital-certificates/tls-ssl-certificates/advantage-ssl)
-[ssl.com](https://www.ssl.com/certificates/premiumssl/)
+1. [Go daady](https://ca.godaddy.com/offers/ssl-certificate/month?isc=sshl5ca18&countryview=1&currencytype=CAD&gclid=Cj0KCQiA1pyCBhCtARIsAHaY_5c0At-wdCdfLCOA5i0WMMxTheGqqBCbsLGrQLa4z-5VjQnd03dQJLsaAlPtEALw_wcB&gclsrc=aw.ds)
+2. [Comodo SSl](https://comodosslstore.com/promoads/cheap-comodo-ssl-certificates.aspx?gclid=Cj0KCQiA1pyCBhCtARIsAHaY_5e4SS0meZ14zKfxrpohuZkCtUGKtH9eKy7dR2JhFINq5N28rm2yQkwaAh4ZEALw_wcB)
+3. [Digicert](https://www.digicert.com/tls-ssl/compare-certificates?ef_id=Cj0KCQiA1pyCBhCtARIsAHaY_5eLOU_wn5_iGycf_FAMDTZnA3NFnWhCFkLvcjKr2sZqpop_mak2bSUaArzWEALw_wcB:G:s&s_kwcid=AL!6100!3!389968107068!e!!g!!digicert&campaignid=197469053&adgroupid=13418307173&gclid=Cj0KCQiA1pyCBhCtARIsAHaY_5eLOU_wn5_iGycf_FAMDTZnA3NFnWhCFkLvcjKr2sZqpop_mak2bSUaArzWEALw_wcB)
+4. [Entrust Datacard](https://www.entrust.com/digital-security/certificate-solutions/products/digital-certificates/tls-ssl-certificates/advantage-ssl)
+5. [ssl.com](https://www.ssl.com/certificates/premiumssl/)
 
 ## Various Open-Source SSL certificate Service
 - All these come under open-source license.
 - Can be commercially used for free
 - No hidden charges
-[OpenSSL](https://www.openssl.org/source/)
-[Let's Crypt](https://letsencrypt.org/)
-[zero SSL](https://zerossl.com/)
-[Certbot](https://certbot.eff.org/)
-[SSL for free](https://www.sslforfree.com/)
+1. [OpenSSL](https://www.openssl.org/source/)
+2. [Let's Crypt](https://letsencrypt.org/)
+3. [zero SSL](https://zerossl.com/)
+4. [Certbot](https://certbot.eff.org/)
+5. [SSL for free](https://www.sslforfree.com/)
 
 
 ## What is OpenSSL
