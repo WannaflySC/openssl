@@ -13,7 +13,7 @@
 - SSL/TLS is used for securing connection between systems so that they can share important information and no one other can read or modify it.
 
 - SSL/TLS basically use encryption algorithms to encrypt that data and share keys only to system who are communicating with each other
-![alt text](https://raw.githubusercontent.com/95keshav/openssl/main/Figure%202.%20SSL%20Client-Server%20communication.png)
+![alt text](https://raw.githubusercontent.com/95keshav/openssl/main/Figure%202.%20SSL%20Client-Server%20communication.png) <br />
 [To Get more information on SSL click here](https://www.youtube.com/watch?v=iQsKdtjwtYI)
 
 ## How To Get SSL Certificate?
@@ -42,14 +42,14 @@ Its Easy, as there are many companies which sell SSL encryption certificate serv
 - Written  in C, Assembly and Perl
 - It  is  used  for  data  encryption
 - It  has  various encryption algorithm and provide many encryption tools
-- SSL/TLS  is  one  of  encryption tool provided by OpenSSL
+- SSL/TLS  is  one  of  encryption tool provided by OpenSSL <br />
 [for more information click here](https://www.openssl.org/)
 
 ## History Of OpenSSL
 
 - Released on 23 December 1998 by OpenSSL Project Team
 - In  2019  OpenSSL  is  managed  by  OpenSSL  management  committee
-- This project budget is around one million per year which primarily completed by donations
+- This project budget is around one million per year which primarily completed by donations <br />
 [Get more information on wikipedia](https://en.wikipedia.org/wiki/OpenSSL)
 
 ## How OpenSSL is Work
@@ -83,5 +83,5 @@ Open SSL architecture is divided into 4 parts
 
 
 ## OpenSSL Module
-![image](https://raw.githubusercontent.com/95keshav/openssl/main/openssl%20modules.png)
+![image](https://raw.githubusercontent.com/95keshav/openssl/main/openssl%20modules.png) <br />
 [Get more information on OpenSSL Architechture](https://www.openssl.org/docs/OpenSSLStrategicArchitecture.html)
