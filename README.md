@@ -87,11 +87,9 @@ Open SSL architecture is divided into 4 parts
 [Get more information on OpenSSL Architechture](https://www.openssl.org/docs/OpenSSLStrategicArchitecture.html)
 
 ## References
-“<a id="1">[1]</a>.” https://www.openssl.org, https://www.openssl.org/docs/OpenSSLStrategicArchitecture.html.
-Figure1. OSI Layers and Protocols used. “Figure1.” https://thecybersecuritymancom.com, https://thecybersecuritymancom.files.wordpress.com/2017/11/84433547__web.png.
-“Figure 2. SSL Client-Server communication.” https://www.manageengine.com/, https://www.manageengine.com/key-manager/information-center/what-is-ssl-certificate-management.html.
-“Figure 3. OpenSSL Modules.” https://www.openssl.org/, https://www.openssl.org/docs/OpenSSLStrategicArchitecture.html.
-
-https://www.sciencedirect.com/topics/engineering/layered-architecture
-https://www.openssl.org/docs
+https://www.openssl.org/docs<br />
+“<a id="1">[1]</a>.” https://www.openssl.org, https://www.openssl.org/docs/OpenSSLStrategicArchitecture.html.<br />
+“Figure1. OSI Layers and Protocols used.” https://thecybersecuritymancom.com, https://thecybersecuritymancom.files.wordpress.com/2017/11/84433547__web.png.<br />
+“Figure 2. SSL Client-Server communication.” https://www.manageengine.com/, https://www.manageengine.com/key-manager/information-center/what-is-ssl-certificate-management.html.<br />
+https://www.sciencedirect.com/topics/engineering/layered-architecture<br />
 
